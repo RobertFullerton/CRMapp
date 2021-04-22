@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
+import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
 
 export const Header = () => {
     return (
@@ -11,12 +11,17 @@ export const Header = () => {
         <Navbar.Brand>
             logo
         </Navbar.Brand>
+    
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ml-auto">
+            <Nav className="searcBar ml-auto">
                 <Nav.Link href="/dashboard">Dashboard</Nav.Link>
                 <Nav.Link href="/dashboard">Clients</Nav.Link>
                 <Nav.Link href="/dashboard">Logout</Nav.Link>
+                <Form className="searchBar col-lg">
+            <FormControl type="text" placeholder="Client Search" className="mr-sm-1" />
+            <Button variant="outline-success">Search</Button>
+        </Form>
             </Nav>
         </Navbar.Collapse>
     </Navbar>
