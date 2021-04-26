@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { ClientData } from '../../components/Client-Data/ClientData';
 import './Dashboard.css';
+import client from '../../assets/SampleClients/dummyclients.json'
 
 export const Dashboard = () => {
     return (
@@ -25,7 +26,7 @@ export const Dashboard = () => {
             <br />
             <Row>
                 <Col className="clientData">
-                    <ClientData />
+                    <ClientData  client={client} />
                 </Col>  
             </Row>   
         </Container>

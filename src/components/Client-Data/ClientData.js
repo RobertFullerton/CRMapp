@@ -7,8 +7,9 @@ const current = new Date();
   const date = `${current.getMonth()+1}/${current.getDate()}/${current.getFullYear()}`;
 
 
-export const ClientData = () => {
+export const ClientData = ({client}) => {
     return (
+        // need to convert table to reactstrap grid
         <Table hover>
             <thead>
                 <tr>
@@ -21,30 +22,22 @@ export const ClientData = () => {
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>{date}</td>
-                    <td><a href="#!">Me</a></td>
-                    <td>CRM Manager</td>
-                    <td>1</td>
-                    <td>$20000</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>{date}</td>
-                    <td><a href="#!">You</a></td>
-                    <td>Rock The Cane</td>
-                    <td>2</td>
-                    <td>$20000</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>{date}</td>
-                    <td><a href="#!">Them</a></td>
-                    <td>Toy Swap</td>
-                    <td>3</td>
-                    <td>$20000</td>
-                </tr>
+                {client.length ? client.map(row =>
+                        <tr key={row.id}>
+                            <td>{row.id}</td>
+                            <td>{date}</td>
+                            <td><a href="#!">{row.client}</a></td>
+                            <td>{row.project}</td>
+                            <td>{row.invoice}</td>
+                            <td>{row.price}</td>
+                        </tr>
+                ) :
+                    <tr>
+                        <td colSpan="12" className="text-center">Click the "+" to add clients</td>
+                            
+                    </tr>
+                }
+                
             </tbody>
         </Table>
     )
