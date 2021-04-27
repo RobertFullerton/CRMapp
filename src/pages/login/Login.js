@@ -5,9 +5,6 @@ import { Jumbotron } from 'react-bootstrap';
 import { LoginForm } from '../../components/LoginForm';
 import { RestPass } from '../../components/ForgotPass';
 
-
-
-
 export const Login = () => {
 
     const [email, setemail] = useState("");
@@ -52,27 +49,25 @@ export const Login = () => {
     };
 
     return (
-        <div className="login">
-           <Jumbotron className="form-box">
-               {formLoad === 'login' && 
+        <div className="login">           
+            <Jumbotron className="formBox">
+                {formLoad === 'login' && 
                 <LoginForm 
-                   handleOnChange={handleOnChange}
-                   handleOnSubmit={handleOnSubmit} 
-                   formSwitcher={formSwitcher}
-                   email={email}
-                   pass={password}
+                    handleOnChange={handleOnChange}
+                    handleOnSubmit={handleOnSubmit} 
+                    formSwitcher={formSwitcher}
+                    email={email}
+                    pass={password}
                 />}
-
                 {formLoad === 'reset' &&
                 <RestPass 
-                   handleOnChange={handleOnChange}
-                   handleOnRestSubmit={handleOnRestSubmit} 
-                   formSwitcher={formSwitcher}
-                   email={email}
-                 />}
-
+                    handleOnChange={handleOnChange}
+                    handleOnRestSubmit={handleOnRestSubmit} 
+                    formSwitcher={formSwitcher}
+                    email={email}
+                />}
             </Jumbotron>
-        </div>
+            </div>
     )
 }
 

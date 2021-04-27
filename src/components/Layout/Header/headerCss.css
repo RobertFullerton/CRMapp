@@ -1,0 +1,10 @@
+.nav {
+    background-color: white;
+    color: slategrey;
+    padding: 15px;
+    margin: 2px;
+}
+
+.searchBar {
+    max-width: fit-content;
+}

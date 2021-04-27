@@ -1,6 +1,5 @@
-{/* CSS proporties in alphabetical order */}
-
-.form-box{
+/* CSS proporties in alphabetical order */
+.formBox{
     box-shadow: 0px 0px 20px -5px black;
 }
 
@@ -8,8 +7,9 @@
     text-align: right;
 }
 .login {
-    height: 100vh;
+    height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }

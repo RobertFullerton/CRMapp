@@ -1,0 +1,14 @@
+.clientContainer{
+    padding: 10vh;
+}
+
+.formTitle {
+    text-align: center;
+    font-weight: bold;
+}
+
+.jumbo {
+    background: transparent !important;
+    max-width: 1000px;
+}
+
